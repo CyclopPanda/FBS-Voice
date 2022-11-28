@@ -14,7 +14,7 @@
     "graphql-request": "^5.0.0",
     "moment": "^2.29.4",
     "next": "13.0.3",
-    "react": "18.2.0",
+    "react": "18.2.0",giot
     "react-dom": "18.2.0"
   },
   "devDependencies": {
