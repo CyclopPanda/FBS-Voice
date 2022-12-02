@@ -61,7 +61,6 @@ export default function Home({ posts }) {
         <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png"/>
         <link rel="manifest" href="site.webmanifest"/>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preload" href="/favicon.ico" as="icon" />
 
         <PageMetadata/> //Calls on PageMetadata to get misc values (decluttering)
 
