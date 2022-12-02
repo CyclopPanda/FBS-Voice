@@ -59,7 +59,7 @@ export default function Home({ posts }) {
 
         <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png"/>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+        <link rel="manifest" href="site.webmanifest"/>
         <link rel="icon" href="/favicon.ico" />
 
         <PageMetadata/> //Calls on PageMetadata to get misc values (decluttering)
