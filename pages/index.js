@@ -80,3 +80,4 @@ export default function Home({ posts }) {
     </div>
   );
 }
+//created by CyclopPanda, cakGit and Thomas
