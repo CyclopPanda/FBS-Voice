@@ -105,3 +105,4 @@ export default function Home({ posts }) {
     </div>
   );
 }
+//created bye CyclopPanda, cakGit and Thomas
