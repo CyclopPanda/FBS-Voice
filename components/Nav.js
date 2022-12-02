@@ -18,8 +18,6 @@ function Nav() {
         height={150}
       />
 
-        <img src="banner-logo.png" alt="FBS VOICE Banner Image" height="150px"/>
-
       </banner>
       <nav>
 
