@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+
 /* 
     All the meta data for the page,
     Needed to tell devices and users more about the page,
