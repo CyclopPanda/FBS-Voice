@@ -33,6 +33,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-This is the code behind FBS Voice. Any questions contact ss@sebastiansexton.com
+## Other
+This is the code behind FBS Voice. Any questions contact [Sebastian](ss@sebastiansexton.com)
 Special thanks to [cak](https://github.com/cakeGit) and Thomas
 
