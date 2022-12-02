@@ -20,7 +20,7 @@ function PageMetadata() {
             <meta name="google-site-verification" content="Vv6Ab5p4eW3hXGhlz5FEzlS7BAR-3yL3s6Hwt0XRTTs" />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-title" content="FBS Voice"/>
-            <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png"/>
+            <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
 
             //Twitter data
             <meta property="og:site_name" content="Site Name" />
@@ -34,8 +34,8 @@ function PageMetadata() {
             <meta itemprop="image" content="#" />
 
             //Other
-            <link rel="manifest" href="icons/site.webmanifest"/>
-            <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5"/>
+            <link rel="manifest" href="site.webmanifest"/>
+            <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5"/>
             <meta name="application-name" content="FBS Voice"/>
             <meta name="msapplication-TileColor" content="#00aba9"/>
             <meta name="theme-color" content="#ffffff"/>
