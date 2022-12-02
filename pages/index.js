@@ -62,8 +62,6 @@ export default function Home({ posts }) {
         <link rel="manifest" href="site.webmanifest"/>
         <link rel="icon" href="/favicon.ico" />
         <meta http-equiv="Content-Security-Policy" content="script-src 'none'"></meta>
-        <script src="https://trusted.example.com/path/jsonp?callback=alert(document.domain)//"></script>
-        <script nonce="random123" src="https://trusted.example.com/trusted_script.js"></script>
 
         <PageMetadata/> //Calls on PageMetadata to get misc values (decluttering)
 
@@ -81,7 +79,12 @@ export default function Home({ posts }) {
           />
         ))}
       </main>
+        <script src="https://trusted.example.com/path/jsonp?callback=alert(document.domain)//"></script>
+        <script nonce="random123" src="https://trusted.example.com/trusted_script.js"></script>
     </div>
+    
   );
+  
 }
+
 //created by CyclopPanda, cakGit and Thomas
