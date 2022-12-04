@@ -8,13 +8,13 @@ function BlogPost({ title, author, coverPhoto, datePublished, slug }) {
     <Link className={styles.cardLink} href={`/posts/${slug}`} title={`View Post '${title}'`}>
       <div className={styles.card}>
           <div className={styles.imgContainer}>
-            <Image layout="fill" src={coverPhoto.url} alt="" />
+            <Image src={coverPhoto.url} alt="Cover Photo" fill loading="eager"/>
           </div>
         <div className={styles.text}>
           <h2>{title}</h2>
           <div className={styles.details}>
             <div className={styles.author}>
-              <img src={author.avatar.url} alt={author.name} />
+              <Image src={author.avatar.url} alt={author.name} width="20" height="20" loading="lazy"/>
               <h3>{author.name}</h3>
             </div>
             <div className={styles.date}>
