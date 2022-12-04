@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+
 /* 
     All the meta data for the page,
     Needed to tell devices and users more about the page,
@@ -20,7 +21,7 @@ function PageMetadata() {
             <meta name="google-site-verification" content="Vv6Ab5p4eW3hXGhlz5FEzlS7BAR-3yL3s6Hwt0XRTTs" />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-title" content="FBS Voice"/>
-            <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+            <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon-180x180.png"/>
 
             //Twitter data
             <meta property="og:site_name" content="Site Name" />

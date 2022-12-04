@@ -1,4 +1,6 @@
+
 import Image from "next/image";
+import BannerImg from "/public/banner-logo.png";
 
 function Nav() {
   return (
@@ -10,8 +12,14 @@ function Nav() {
           NEWS FOR STUDENTS BY STUDENTS
         </h1>
 
-        <Image src="/banner-logo.webp" alt="FBS VOICE Banner Image" width="500" height="150" loading="eager"/>
-
+        <Image
+          src="/banner-logo.png"
+          alt="FBS VOICE Banner Image"
+          width={500}
+          height={150}
+          loading="eager"
+        />
+        
       </banner>
       <nav>
 
