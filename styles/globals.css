@@ -120,4 +120,17 @@ a {
   nav {
     padding: 3rem 0rem;
   }
+  banner {
+    grid-template-columns: auto;
+    text-align: center;
+  }
+  banner h1 {
+    font-weight: lighter;
+  }
+  banner img {
+    width: 90vw;
+    height: auto;
+    margin: 0 4vw;
+    order: -1;
+  }
 }
