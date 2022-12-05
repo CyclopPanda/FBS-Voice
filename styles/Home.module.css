@@ -10,11 +10,13 @@
 .main {
   margin: 0% 5%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 3rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 400px) {
+  /*Thin mobile screens*/
   .main {
+    grid-template-columns: auto;
   }
 }
