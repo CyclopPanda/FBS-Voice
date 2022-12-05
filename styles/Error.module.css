@@ -1,0 +1,43 @@
+.container {
+    display: block;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.code {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    border-radius: 20px;
+    margin: 2vh 0;
+    padding: 2.5vh 1vw;
+    text-shadow: 0 0 10px #AFAFAF;
+    font-size: 10rem;
+    width: 95vw;
+    display: block;
+}
+.header {
+    font-size: 2rem;
+}
+
+.return {
+    font-size: 2rem;
+    line-height: 30px;
+}
+
+.return a {
+    font-weight: lighter;
+    font-size: 3rem;
+    color: #23AFFF;
+    text-decoration: underline;
+    line-height: 50px;
+}
+
+.return a:active {
+    font-weight: lighter;
+    font-size: 3rem;
+    color: #2e91ca;
+    text-decoration: underline;
+}
