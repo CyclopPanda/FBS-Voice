@@ -1,6 +1,4 @@
-
 import Image from "next/image";
-import BannerImg from "/public/banner-logo.png";
 
 function Nav() {
   return (
