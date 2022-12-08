@@ -2,12 +2,12 @@ import Link from "next/link";
 import Head from "next/head";
 import styles from "../styles/Error.module.css";
 
-function Error({ statusCode }) {
+function Error() {
   return (
     <div className={styles.container}>
         <Head>
             <title>
-                {statusCode + " | Error"}
+                Error | 404
             </title>
         </Head>
 
@@ -15,20 +15,13 @@ function Error({ statusCode }) {
             Oops, somethings gone wrong...
         </h2>
         <h1 className={styles.code}>
-            {statusCode}
+            404
         </h1>
-        {(statusCode == "404" ? 
             <p className={styles.return}>
                 File not found : Try going back to the <Link href="/" title="Return home">homepage</Link>
             </p>
-        :"")}
     </div>
   )
-}
- 
-Error.getInitialProps = ({ res, err }) => {
-  const statusCode = res ? res.statusCode : err ? err.statusCode : 404
-  return { statusCode }
 }
  
 export default Error;
