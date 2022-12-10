@@ -79,6 +79,7 @@ export default function Home({ posts }) {
         ))}
 
 <form name="fileForm" enctype="multipart/form-data" data-netlify="true">
+      <H1>Submit your articles here</H1>
       <p>
         <label>
           <span>Name:</span>
