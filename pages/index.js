@@ -82,6 +82,7 @@ export default function Home({ posts }) {
             slug={post.slug}
           />
         ))},
+        <h1>Submit an article</h1>
         <form name="fileForm" enctype="multipart/form-data" data-netlify="true">
           <p>
             <label>
