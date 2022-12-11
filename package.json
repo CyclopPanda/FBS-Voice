@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "^4.29.1",
+    "@netlify/plugin-nextjs": "^4.29.3",
     "graphql": "^16.6.0",
     "graphql-request": "^5.0.0",
     "moment": "^2.29.4",

@@ -9,7 +9,6 @@ const graphcms = new GraphQLClient(
   "https://api-eu-west-2.hygraph.com/v2/clalhyk7r20kx01tc9qipb81z/master"
 );
 
-
 //Needed to pull data from hygraph
 const QUERY = gql`
   {
@@ -51,19 +50,25 @@ export async function getStaticProps() {
 export default function Home({ posts }) {
   return (
     <div className={styles.container}>
-
       <Head>
-
         <title>FBS Voice</title>
         <meta name="description" content="FBS Voice news website." />
-
-        <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png"/>
-        <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png"/>
-        <link rel="manifest" href="site.webmanifest"/>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="icons/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="icons/favicon-16x16.png"
+        />
+        <link rel="manifest" href="site.webmanifest" />
         <link rel="icon" href="/favicon.ico" />
-
-        <PageMetadata/> //Calls on PageMetadata to get misc values (decluttering)
-
+        <PageMetadata /> //Calls on PageMetadata to get misc values
+        (decluttering)
       </Head>
 
       <main className={styles.main}>
@@ -76,12 +81,27 @@ export default function Home({ posts }) {
             datePublished={post.datePublished}
             slug={post.slug}
           />
-        ))}
+        ))},
+        <h1>Submit an article</h1>
+        <form name="fileForm" enctype="multipart/form-data" data-netlify="true">
+          <p>
+            <label>
+              <span>Name:</span>
+              <input name="name" type="text" />
+            </label>
+          </p>
+          <p>
+            <label>
+              <span>Add file:</span>
+              <input name="file" type="file" />
+            </label>
+          </p>
+          <button>Submit</button>
+        </form>
+        <p class="result"></p>
       </main>
     </div>
-    
   );
-  
 }
 
 //created by CyclopPanda, cakGit and Thomas
