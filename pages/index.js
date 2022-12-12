@@ -144,7 +144,6 @@ function formatContent(posts, categories) {
           <BlogCard post={post}/>
         )}
       </div>
-      
     </main>
   );
 
