@@ -83,6 +83,7 @@ export default function BlogPost({ post }) {
         className={styles.content}
         dangerouslySetInnerHTML={{ __html: post.content.html }}
       ></div>
+      
     </main>
   );
 }
