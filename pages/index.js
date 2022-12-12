@@ -83,7 +83,12 @@ export default function Home({ posts }) {
           />
         ))},
         <h1>Submit an article</h1>
-        <form name="fileForm" enctype="multipart/form-data" data-netlify="true">
+        <form name="fileForm" enctype="multipart/form-data" netlify-honeypot="bot-field" data-netlify="true">
+          <p class="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+          </p>
           <p>
             <label>
               <span>Name:</span>
