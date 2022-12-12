@@ -64,7 +64,7 @@ export default function BlogPost({ post }) {
       <img
         className={styles.cover}
         src={post.coverPhoto.url}
-        alt={post.title}
+        alt={post.title} 
       />
       <div className={styles.title}>
         <div className={styles.authdetails}>

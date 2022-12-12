@@ -3,7 +3,7 @@ import moment from "moment";
 import Link from "next/link";
 import Image from "next/image";
 
-function BlogPost({ title, author, coverPhoto, datePublished, slug }) {
+function BlogPost({ title, author, coverPhoto, category, datePublished, slug }) {
   return (
     <Link className={styles.cardLink} href={`/posts/${slug}`} title={`View Post '${title}'`}>
       <div className={styles.card}>
@@ -18,7 +18,10 @@ function BlogPost({ title, author, coverPhoto, datePublished, slug }) {
               <h3>{author.name}</h3>
             </div>
             <div className={styles.date}>
-              <h3>{moment(datePublished).format("MMMM d, YYYY")}</h3>
+              <h3>{moment(datePublished).format("DD/MM/YY")}</h3>
+            </div>
+            <div className={styles.category}>
+              <h3>{category}</h3>
             </div>
           </div>
         </div>
