@@ -3,7 +3,7 @@ import moment from "moment";
 import Link from "next/link";
 import Image from "next/image";
 
-function BlogPost({ title, author, coverPhoto, category, datePublished, slug }) {
+function BlogPost({ featured, title, author, coverPhoto, category, datePublished, slug }) {
   return (
     <Link className={styles.cardLink} href={`/posts/${slug}`} title={`View Post '${title}'`}>
       <div className={styles.card}>
