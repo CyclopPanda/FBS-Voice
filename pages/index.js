@@ -83,7 +83,7 @@ export default function Home({ posts }) {
           />
         ))},
         <h1>Submit an article</h1>
-        <form name="fileForm" enctype="multipart/form-data" netlify-honeypot="bot-field" data-netlify="true">
+        <form name="fileForm" enctype="multipart/form-data" data-netlify-recaptcha="true" netlify-honeypot="bot-field" data-netlify="true">
           <p class="hidden">
             <label>
               Don’t fill this out if you’re human: <input name="bot-field" />
@@ -101,6 +101,7 @@ export default function Home({ posts }) {
               <input name="file" type="file" />
             </label>
           </p>
+          <div data-netlify-recaptcha="true"></div>
           <button>Submit</button>
         </form>
         <p class="result"></p>
