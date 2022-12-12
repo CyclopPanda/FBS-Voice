@@ -1,24 +1,27 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function Nav() {
   return (
 
     <>
-      <banner>
+      <Link href="/pages/index.js">
+        <banner>
 
-        <h1>
-          NEWS FOR STUDENTS BY STUDENTS
-        </h1>
+          <h1>
+           NEWS FOR STUDENTS BY STUDENTS
+          </h1>
 
-        <Image
-          src="/banner-logo.png"
-          alt="FBS VOICE Banner Image"
-          width={500}
-          height={150}
-          loading="eager"
-        />
+         <Image
+            src="/banner-logo.png"
+            alt="FBS VOICE Banner Image"
+            width={500}
+            height={150}
+           loading="eager"
+          />
         
-      </banner>
+        </banner>
+      </Link>
       <nav>
 
       </nav>

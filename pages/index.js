@@ -3,7 +3,6 @@ import styles from "../styles/Home.module.css";
 import { GraphQLClient, gql } from "graphql-request";
 import BlogCard from "../components/BlogCard";
 import PageMetadata from "../components/PageMetadata";
-import { render } from "react-dom";
 
 const graphcms = new GraphQLClient(
   //Api key do noy touch! Only change if trasfering hygraph model
@@ -11,7 +10,7 @@ const graphcms = new GraphQLClient(
 );
 
 //Needed to pull data from hygraph
-const POSTS_QUERY = gql`
+const QUERY = gql`
   {
     posts {
       id
@@ -40,30 +39,17 @@ const POSTS_QUERY = gql`
   }
 `;
 
-const CATEGORY_QUERY = gql`
-  {
-    categories {
-      title
-      posts {
-        id
-      }
-    }
-  }
-`;
-
 export async function getStaticProps() {
-  const { posts } = await graphcms.request(POSTS_QUERY);
-  const { categories } = await graphcms.request(CATEGORY_QUERY);
+  const { posts } = await graphcms.request(QUERY);
   return {
     props: {
       posts,
-      categories,
     },
     revalidate: 30,
   };
 }
 
-export default function Home({ posts, categories}) {
+export default function Home({ posts }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -87,67 +73,46 @@ export default function Home({ posts, categories}) {
         (decluttering)
       </Head>
 
-      {formatContent(posts, categories)}
-
+      <main className={styles.main}>
+        {posts.map((post) => (
+          <BlogCard
+            title={post.title}
+            author={post.author}
+            coverPhoto={post.coverPhoto}
+            key={post.id}
+            datePublished={post.datePublished}
+            category={post.category}
+            slug={post.slug}
+          />
+        ))},
+        <form name="fileForm" enctype="multipart/form-data" data-netlify-recaptcha="true" netlify-honeypot="bot-field" data-netlify="true">
+        <h1>Submit an article</h1>
+          <p class="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+          </p>
+          <p>
+            <label>
+              <span>Name:</span>
+              <input name="name" type="text" />
+            </label>
+          </p>
+          <p>
+            <label>
+              <span>Add file:</span>
+              <input name="file" type="file" />
+            </label>
+          </p>
+          <div data-netlify-recaptcha="true"></div>
+          <button>Submit</button>
+        </form>
+        <p class="result"></p>
+        
+      </main>
+      
     </div>
   );
-}
-
-function formatContent(posts, categories) {
-
-  var remaining = posts.sort((a, b) => (new Date(a.datePublished) < new Date(b.datePublished)) ? 1 : -1);
-  var sortedPosts = {};
-
-  var latest = remaining[0];
-  remaining = remaining.filter(remain => remain!=latest);
-  sortedPosts["Latest"] = latest;
-
-  for (let i=0; i<categories.length; i++) {
-    var categoryPosts = [];
-    categories[i]["posts"].map(
-      postId => {
-        var post = remaining.filter(remain=>remain["id"]==postId["id"])[0];
-        if (post!=null) {
-          categoryPosts.push(post);
-          remaining = remaining.filter(remain=>remain["id"]!=postId["id"]);
-        }
-      });
-    sortedPosts[categories[i]["title"]] = categoryPosts;
-  }
-
-  return (
-    <main className={styles.main}>
-
-      <div className={styles.latestTitle}>
-        <h1>Latest</h1>
-      </div>
-      <div className={styles.latest}>
-        <BlogCard
-          post={latest}
-        />
-      </div>
-
-      <div className={styles.featuredTitle}>
-        <h1>Featured</h1>
-      </div>
-      <div className={styles.featured}>
-        {sortedPosts.Featured.map(post=>
-          <BlogCard post={post}/>
-        )}
-      </div>
-
-      <div className={styles.feedTitle}>
-        <h1>Feed</h1>
-      </div>
-      <div className={styles.feed}>
-        {remaining.map(post=>
-          <BlogCard post={post}/>
-        )}
-      </div>
-      
-    </main>
-  );
-
 }
 
 //created by CyclopPanda, cakGit and Thomas
