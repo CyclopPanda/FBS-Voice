@@ -1,4 +1,4 @@
-import styles from "./modulestyles/BlogCard.module.css";
+import styles from "BlogCard.module.css";
 import moment from "moment";
 import Link from "next/link";
 import Image from "next/image";
