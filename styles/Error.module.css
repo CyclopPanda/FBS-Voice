@@ -1,9 +1,5 @@
 .container {
-    display: block;
-    position: absolute;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
+    display: grid;
     text-align: center;
 }
 .code {
