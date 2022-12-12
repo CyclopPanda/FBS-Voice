@@ -29,12 +29,21 @@
   display: flex;
   flex-direction: column;
   align-items: left;
+  margin-top: 0;
 }
 
 .cover {
-  width: 75%;
-  height: 30vh;
-  object-fit: cover;
+  width: 90%;
+  height: 100vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0, 0, 0, 0;
+  margin: auto, auto, 0, 5vw;
+  border-radius: 1em;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .blog code {
@@ -42,7 +51,7 @@
   background: rgb(55, 55, 55);
   color: rgb(246, 246, 246);
   display: block;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 2rem 0rem;
   border-radius: 2rem;
 }
