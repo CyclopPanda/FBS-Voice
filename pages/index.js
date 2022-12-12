@@ -16,6 +16,8 @@ const QUERY = gql`
       id
       title
       datePublished
+      category
+      featured
       slug
       content {
         html
@@ -79,11 +81,12 @@ export default function Home({ posts }) {
             coverPhoto={post.coverPhoto}
             key={post.id}
             datePublished={post.datePublished}
+            category={post.category}
             slug={post.slug}
           />
         ))},
-        <h1>Submit an article</h1>
         <form name="fileForm" enctype="multipart/form-data" data-netlify-recaptcha="true" netlify-honeypot="bot-field" data-netlify="true">
+        <h1>Submit an article</h1>
           <p class="hidden">
             <label>
               Don’t fill this out if you’re human: <input name="bot-field" />
