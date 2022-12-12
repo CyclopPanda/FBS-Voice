@@ -72,8 +72,8 @@
   height: 100%;
 }
 
-@media screen and (max-width: 400px) {
-  /*Mobile screens*/
+@media screen and (max-width: 900px) {
+  /*Smaller screens*/
   .main {
     grid-template-columns: 100%;
     grid-template-areas:
@@ -83,6 +83,10 @@
       'featured'
       'feedTitle'
       'feed';
+  }
+
+  .latest > a > div {
+    height: 50vh;
   }
 
   .main>*>h1::after {

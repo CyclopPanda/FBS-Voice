@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function Nav() {
   return (
@@ -19,9 +20,22 @@ function Nav() {
         />
         
       </banner>
-      <nav>
+      <navbar>
 
-      </nav>
+        <div class="dropdown">
+          <Link href="/" title="Home">Home</Link>
+
+          <div class="dropdownContent">
+            <Link href="/category/News" title="News">News</Link>
+            <Link href="/category/Reviews" title="Reviews">Reviews</Link>
+            <Link href="/category/School" title="School">School</Link>
+            <Link href="/category/Sport" title="Sport">Sport</Link>
+          </div>
+        </div>
+
+        <Link href="mailto:20tjohnton@fulhamboysschool.org.uk" class="right hideable" title="Contact">Contact</Link>
+
+      </navbar>
 
     </>
   );

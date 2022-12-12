@@ -7,7 +7,7 @@
   display: grid;
   grid-template-rows: auto max(30%, 12.5vh);
   height: 35vh;
-  min-height: 50vh;
+  min-height: 25vw;
 }
 .card h2 {
   padding: 0.5rem 0rem;
@@ -51,7 +51,7 @@
   height: 100%;
   cursor: pointer;
   transition: all 0.5s ease;
-  border-radius: 15px;
+  z-index: 0;
 }
 
 .details {
@@ -108,3 +108,5 @@
     grid-template-rows: auto max(50%, 12.5vh);
   }
 }
+
+
