@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import { GraphQLClient, gql } from "graphql-request";
 import BlogCard from "../components/BlogCard";
 import PageMetadata from "../components/PageMetadata";
+import FooterData from "../components/Footer";
 import { render } from "react-dom";
 
 const graphcms = new GraphQLClient(
@@ -144,7 +145,11 @@ function formatContent(posts, categories) {
           <BlogCard post={post}/>
         )}
       </div>
+      <footer>
+          <FooterData></FooterData>
+      </footer>
     </main>
+
   );
 
 }

@@ -15,7 +15,7 @@ function dev () {
            Special thanks to samuel and seb
         </h2>
             <p className={styles.return}>
-                Specifly Samuel 
+                Specificly Samuel 
                 Want to go back to <Link href="/" title="Return home">homepage</Link>
             </p>
     </div>
