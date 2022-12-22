@@ -144,6 +144,11 @@ function formatContent(posts, categories) {
           <BlogCard post={post}/>
         )}
       </div>
+      <div className={styles.AD}>
+        {remaining.map(post=>
+          <BlogCard post={post}/>
+        )}
+      </div>
     </main>
 
   );
