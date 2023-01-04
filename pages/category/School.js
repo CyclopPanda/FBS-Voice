@@ -1,8 +1,8 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import Head from "../next/head";
+import styles from "../../styles/Home.module.css";
 import { GraphQLClient, gql } from "graphql-request";
-import BlogCard from "../components/BlogCard";
-import PageMetadata from "../components/PageMetadata";
+import BlogCard from "../../components/BlogCard";
+import PageMetadata from "../../components/PageMetadata";
 import { render } from "react-dom";
 
 const graphcms = new GraphQLClient(
@@ -68,7 +68,7 @@ export default function Home({ posts, categories}) {
     <div className={styles.container}>
       <Head>
         <title>FBS Voice</title>
-        <meta name="description" content="FBS Voice news website." />
+        <meta name="description" content="FBS Student News Website." />
         <link
           rel="icon"
           type="image/png"
@@ -83,8 +83,7 @@ export default function Home({ posts, categories}) {
         />
         <link rel="manifest" href="site.webmanifest" />
         <link rel="icon" href="/favicon.ico" />
-        <PageMetadata /> //Calls on PageMetadata to get misc values
-        (decluttering)
+        <PageMetadata /> //Calls on PageMetadata to get misc values (decluttering)
       </Head>
 
       {formatContent(posts, categories)}

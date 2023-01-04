@@ -1,8 +1,8 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import Head from "../next/head";
+import styles from "../../styles/Home.module.css";
 import { GraphQLClient, gql } from "graphql-request";
-import BlogCard from "../components/BlogCard";
-import PageMetadata from "../components/PageMetadata";
+import BlogCard from "../../components/BlogCard";
+import PageMetadata from "../../components/PageMetadata";
 import { render } from "react-dom";
 
 const graphcms = new GraphQLClient(
