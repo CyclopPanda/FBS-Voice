@@ -1,4 +1,4 @@
-import Head from "../next/head";
+import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import { GraphQLClient, gql } from "graphql-request";
 import BlogCard from "../../components/BlogCard";
