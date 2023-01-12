@@ -27,8 +27,8 @@ function Nav() {
 
           <div className="dropdownContent">
             <Link href="/category/News" title="News">News</Link>
+            <Link href="/category/Commentary" title="Commentary">Commentary</Link>
             <Link href="/category/Reviews" title="Reviews">Reviews</Link>
-            <Link href="/category/School" title="School">School</Link>
             <Link href="/category/Sport" title="Sport">Sport</Link>
           </div>
         </div>
