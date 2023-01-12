@@ -42,13 +42,27 @@ const CATEGORIES = gql`
         }
     }`;
 
-module.exports = Object.freeze({
-    POSTS: POSTS,
-    CATEGORIES: CATEGORIES,
+var posts;
+var layoutCategories;
+
+var fetchData = async ()=>{
+    posts = (await graphcms.request(POSTS))["posts"];
+    layoutCategories = (await graphcms.request(CATEGORIES))["layoutCategories"];
+};
+
+module.exports = {
+    getPosts: async ()=>{
+        if (posts == undefined) await fetchData()
+        return posts;
+    },
+    getLayoutCategories: async ()=>{
+        if (posts == undefined) await fetchData()
+        return layoutCategories
+    },
 
     getStaticProps: async ()=>{
-        const { posts } = await graphcms.request(POSTS);
-        const { layoutCategories } = await graphcms.request(CATEGORIES);
+        if (posts == undefined) await fetchData()
+
         return {
           props: {
             posts,
@@ -57,4 +71,5 @@ module.exports = Object.freeze({
           revalidate: 60,
         };
     },
-});
+    fetchData: fetchData,
+};

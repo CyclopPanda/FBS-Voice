@@ -1,12 +1,9 @@
 import { GraphQLClient, gql } from "graphql-request";
 import styles from "../../styles/Slug.module.css";
+import Content from "../../components/Content";
 import moment from "moment";
 
-const graphcms = new GraphQLClient(
-  "https://api-eu-west-2.hygraph.com/v2/clalhyk7r20kx01tc9qipb81z/master"
-);
-
-const QUERY = gql`
+/*const QUERY = gql`
   query Post($slug: String!) {
     post(where: { slug: $slug }) {
       id
@@ -37,20 +34,19 @@ const SLUGLIST = gql`
       slug
     }
   }
-`;
+`;*/
 
 export async function getStaticPaths() {
-  const { posts } = await graphcms.request(SLUGLIST);
   return {
-    paths: posts.map((post) => ({ params: { slug: post.slug } })),
+    paths: (await Content.getPosts()).map((post) => ({ params: { slug: post.slug } })),
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
   const slug = params.slug;
-  const data = await graphcms.request(QUERY, { slug });
-  const post = data.post;
+  const post = (await Content.getPosts()).filter((post) => (post.slug == slug))[0];
+
   return {
     props: {
       post,
@@ -90,7 +86,7 @@ export default function BlogPost({ post }) {
         
 
       </div>
-      
+
       <div
         className={styles.content}
         dangerouslySetInnerHTML={{ __html: post.content.html }}

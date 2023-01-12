@@ -1,6 +1,6 @@
 import styles from "../../styles/Home.module.css";
 import BlogCard from "../../components/BlogCard";
-import Query from "../../components/Query";
+import Query from "../../components/Content";
 import DefaultHead from "../../components/DefaultHead";
 
 export async function getStaticProps() {

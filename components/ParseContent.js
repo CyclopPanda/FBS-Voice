@@ -1,15 +1,13 @@
 
 export default function ParseContent(posts, categories) {
-    
+
   var remaining = posts.sort((a, b) => (new Date(a.datePublished) < new Date(b.datePublished)) ? 1 : -1);
   var sortedPosts = {};
 
   var latest = remaining[0];
   remaining = remaining.filter(remain => remain!=latest);
   sortedPosts["Latest"] = latest;
-
-  console.log(categories)
-
+  
   for (let i=0; i<categories.length; i++) {
     var categoryPosts = [];
     categories[i]["posts"].map(

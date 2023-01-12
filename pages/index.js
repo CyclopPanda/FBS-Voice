@@ -1,11 +1,11 @@
 import styles from "../styles/Home.module.css";
 import BlogCard from "../components/BlogCard";
-import Query from "../components/Query";
+import Content from "../components/Content";
 import ParseContent from "../components/ParseContent";
 import DefaultHead from "../components/DefaultHead";
 
 export async function getStaticProps() {
-  return Query.getStaticProps();
+  return Content.getStaticProps();
 }
 
 export default function Home({ posts, layoutCategories}) {
