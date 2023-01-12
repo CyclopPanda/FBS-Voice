@@ -10,7 +10,7 @@ export async function getStaticProps() {
 
 export default function Home({ posts, layoutCategories}) {
 
-  var sortedPosts = ParseContent(posts, categories);
+  var sortedPosts = ParseContent(posts, layoutCategories);
 
   return (
     <div className={styles.container}>
