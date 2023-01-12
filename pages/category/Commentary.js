@@ -21,7 +21,7 @@ export default function Commentary({ posts, layoutCategories}) {
       <main className={styles.main}>
 
         <div className={styles.feedTitle}>
-          <h1>News</h1>
+          <h1>Commentary</h1>
         </div>
         <div className={styles.feed}>
           {commentaryPosts.map(post=>
