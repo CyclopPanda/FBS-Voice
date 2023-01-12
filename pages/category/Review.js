@@ -7,10 +7,10 @@ export async function getStaticProps() {
   return await Query.getStaticProps();
 }
 
-export default function News({ posts, layoutCategories}) {
+export default function Review({ posts, layoutCategories}) {
 
-  var newsPosts = posts.filter(
-    (post) => post.category == "News"
+  var reviewPosts = posts.filter(
+    (post) => post.category == "Review"
   )
 
   return (
@@ -21,10 +21,10 @@ export default function News({ posts, layoutCategories}) {
       <main className={styles.main}>
 
         <div className={styles.feedTitle}>
-          <h1>News</h1>
+          <h1>Reviews</h1>
         </div>
         <div className={styles.feed}>
-          {newsPosts.map(post=>
+          {reviewPosts.map(post=>
             <BlogCard post={post}/>
           )}
         </div>
