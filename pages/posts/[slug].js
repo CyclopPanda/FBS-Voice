@@ -13,6 +13,7 @@ const QUERY = gql`
       title
       slug
       datePublished
+      category
       author {
         id
         name
@@ -54,31 +55,42 @@ export async function getStaticProps({ params }) {
     props: {
       post,
     },
-    revalidate: 30,
+    revalidate: 60,
   };
 }
 
 export default function BlogPost({ post }) {
   return (
     <main className={styles.blog}>
-      <img
-        className={styles.cover}
-        src={post.coverPhoto.url}
-        alt={post.title} 
-      />
-      <div className={styles.title}>
-        <div className={styles.authdetails}>
-          <img src={post.author.avatar.url} alt={post.author.name} />
-          <div className={styles.authtext}>
-            <h6>By {post.author.name} </h6>
-            <h6 className={styles.date}>
-              {moment(post.datePublished).format("MMMM d, YYYY")}
-            </h6>
+
+      <div
+        className={styles.titleContainer}
+        style={{backgroundImage: "url(" + post.coverPhoto.url + ")"}}
+        >
+        
+        <div className={styles.title}>
+          <h1>
+            {post.title}
+          </h1>
+
+          <h5>
+            {post.category}
+          </h5>
+
+          <div className={styles.authorDetails}>
+            <img src={post.author.avatar.url} alt={post.author.name} />
+            <div className={styles.authorText}>
+              <h6>By {post.author.name} </h6>
+              <h6 className={styles.date}>
+                {moment(post.datePublished).format("MMMM d, YYYY")}
+              </h6>
+            </div>
           </div>
         </div>
-        <h2>{post.title}</h2>
-      </div>
+        
 
+      </div>
+      
       <div
         className={styles.content}
         dangerouslySetInnerHTML={{ __html: post.content.html }}

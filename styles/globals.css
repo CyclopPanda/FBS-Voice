@@ -154,6 +154,9 @@ a {
   font-weight: bold;
 }
 
+#no-mobile { display: block; }
+#mobile { display: none; }
+
 @media screen and (max-width: 768px) {
   body {
     margin: 0% 0%;
@@ -186,4 +189,8 @@ a {
     display: grid;
     justify-content: center;
   }
+
+  #mobile { display: block; }
+  #no-mobile { display: none; }
+
 }

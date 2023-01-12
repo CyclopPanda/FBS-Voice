@@ -23,9 +23,12 @@ function Nav() {
       <navbar>
 
         <div className="dropdown">
-          <Link href="/" title="Home">Home</Link>
+
+          <Link href="/" title="Home" id="no-mobile">Home</Link>
+          <a title="Menu" id="mobile">Menu</a>
 
           <div className="dropdownContent">
+            <Link href="/" title="Home" id="mobile">Home</Link>
             <Link href="/category/News" title="News">News</Link>
             <Link href="/category/Commentary" title="Commentary">Commentary</Link>
             <Link href="/category/Review" title="Review">Review</Link>
