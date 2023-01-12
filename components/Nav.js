@@ -22,10 +22,10 @@ function Nav() {
       </banner>
       <navbar>
 
-        <div class="dropdown">
+        <div className="dropdown">
           <Link href="/" title="Home">Home</Link>
 
-          <div class="dropdownContent">
+          <div className="dropdownContent">
             <Link href="/category/News" title="News">News</Link>
             <Link href="/category/Reviews" title="Reviews">Reviews</Link>
             <Link href="/category/School" title="School">School</Link>
@@ -33,7 +33,7 @@ function Nav() {
           </div>
         </div>
 
-        <Link href="mailto:20tjohnton@fulhamboysschool.org.uk" class="right hideable" title="Contact">Contact</Link>
+        <Link href="mailto:20tjohnton@fulhamboysschool.org.uk" className="right hideable" title="Contact">Contact</Link>
 
       </navbar>
 
