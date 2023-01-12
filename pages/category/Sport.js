@@ -1,10 +1,11 @@
 import styles from "../../styles/Home.module.css";
 import BlogCard from "../../components/BlogCard";
-import Query from "../../components/Content";
 import DefaultHead from "../../components/DefaultHead";
 
+const Content = require("../../components/Content");
+
 export async function getStaticProps() {
-  return await Query.getStaticProps();
+  return await Content.getStaticProps();
 }
 
 export default function Sport({ posts, layoutCategories}) {
