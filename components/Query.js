@@ -54,7 +54,7 @@ module.exports = Object.freeze({
             posts,
             layoutCategories,
           },
-          revalidate: 30,
+          revalidate: 60,
         };
     },
 });
