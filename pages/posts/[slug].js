@@ -1,40 +1,7 @@
-import { GraphQLClient, gql } from "graphql-request";
 import styles from "../../styles/Slug.module.css";
-import Content from "../../components/Content";
 import moment from "moment";
 
-/*const QUERY = gql`
-  query Post($slug: String!) {
-    post(where: { slug: $slug }) {
-      id
-      title
-      slug
-      datePublished
-      category
-      author {
-        id
-        name
-        avatar {
-          url
-        }
-      }
-      content {
-        html
-      }
-      coverPhoto {
-        id
-        url
-      }
-    }
-  }
-`;
-const SLUGLIST = gql`
-  {
-    posts {
-      slug
-    }
-  }
-`;*/
+const Content = require("../../components/Content");
 
 export async function getStaticPaths() {
   return {

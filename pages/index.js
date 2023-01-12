@@ -1,8 +1,9 @@
 import styles from "../styles/Home.module.css";
 import BlogCard from "../components/BlogCard";
-import Content from "../components/Content";
 import ParseContent from "../components/ParseContent";
 import DefaultHead from "../components/DefaultHead";
+
+const Content = require("../components/Content");
 
 export async function getStaticProps() {
   return Content.getStaticProps();

@@ -42,10 +42,11 @@ const CATEGORIES = gql`
         }
     }`;
 
-var posts;
-var layoutCategories;
+let posts;
+let layoutCategories;
 
-var fetchData = async ()=>{
+let fetchData = async ()=>{
+    console.log("Fetching")
     posts = (await graphcms.request(POSTS))["posts"];
     layoutCategories = (await graphcms.request(CATEGORIES))["layoutCategories"];
 };
