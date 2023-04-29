@@ -20,7 +20,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "eslint": "^8.27.0",
+    "eslint": "^7.28.0",
     "workbox-cli": "^6.5.4"
   }
 }
