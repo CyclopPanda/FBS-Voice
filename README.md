@@ -36,3 +36,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Other
 This is the code behind FBS Voice. Any questions contact [Sebastian](ss@sebastiansexton.com). A special thanks to [cak](https://github.com/cakeGit), [CyclopPanda](https://github.com/CyclopPanda) and Thomas.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/27dbb7b8-2179-49ce-8e23-6877ad3b08fa/deploy-status)](https://app.netlify.com/sites/silver-begonia-0e2f37/deploys)
