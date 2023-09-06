@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["media.graphassets.com", "localhost", "sebastiansexton.com"],
+    domains: ["media.graphassets.com", "localhost", "voice.fulhamboysschool.org.uk"],
   },
   i18n: {
     locales: ["en"],

@@ -20,9 +20,6 @@ function BlogPost({ post }) {
             <div className={styles.date}>
               <h3>{moment(post.datePublished).format("DD/MM/YY")}</h3>
             </div>
-            <div className={styles.category}>
-              <h3>{post.category}</h3>
-            </div>
           </div>
         </div>
       </div>
