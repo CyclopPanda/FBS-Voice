@@ -72,7 +72,7 @@
   height: 100%;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   /*Smaller screens*/
   .main {
     grid-template-columns: 100%;

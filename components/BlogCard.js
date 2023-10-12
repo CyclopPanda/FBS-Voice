@@ -10,9 +10,8 @@ function BlogPost({ post }) {
           <div className={styles.imgContainer}>
             <Image src={post.coverPhoto.url} alt="Cover Photo" fill loading="eager"/>
           </div>
-        <div className={styles.text}>
-          <h2>{post.title}</h2>
-          <div className={styles.details}>
+        <h2 className={styles.title}>{post.title}</h2>
+        <div className={styles.details}>
             <div className={styles.author}>
               <Image src={post.author.avatar.url} alt={post.author.name} width="20" height="20" loading="lazy"/>
               <h3>{post.author.name}</h3>
@@ -21,7 +20,6 @@ function BlogPost({ post }) {
               <h3>{moment(post.datePublished).format("DD/MM/YY")}</h3>
             </div>
           </div>
-        </div>
       </div>
     </Link>
   );

@@ -11,6 +11,8 @@ export async function getStaticProps() {
 
 export default function Home({ posts, layoutCategories}) {
 
+  console.log(posts.length)
+
   var sortedPosts = ParseContent(posts, layoutCategories);
 
   return (
